@@ -1,7 +1,3 @@
 micronaut:
   application:
     name: videoCli
-netty:
-  default:
-    allocator:
-      max-order: 3

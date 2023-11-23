@@ -11,26 +11,26 @@ repositories {
 }
 
 dependencies {
-    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("info.picocli:picocli-codegen")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut:micronaut-http-client")
+    implementation("info.picocli:picocli")
+    implementation("io.micronaut.picocli:micronaut-picocli")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
+    Implementation("io.micronaut:micronaut-http-client")
 }
 
 
 application {
-    mainClass.set("uk.ac.york.eng2.videos.cli.Application")
+    mainClass.set("uk.ac.york.eng2.videos.cli.VideoCliCommand")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
     targetCompatibility = JavaVersion.toVersion("11")
 }
 
-graalvmNative.toolchainDetection = false
 micronaut {
-    runtime("netty")
     testRuntime("junit5")
     processing {
         incremental(true)
