@@ -1,14 +1,14 @@
-package uk.ac.york.eng2.videos.cli;
+package uk.ac.york.eng2.videos.cli.videos;
 
 import picocli.CommandLine.Command;
 import jakarta.inject.Inject;
-import uk.ac.york.eng2.books.cli.domain.Video;
+import uk.ac.york.eng2.videos.cli.domain.Video;
 
 
 @Command(name = "get-videos", description = "gets videos",
         mixinStandardHelpOptions = true)
 
-public class GetVideosCommand implements Runnable {
+public class getVideosCommand implements Runnable {
 	
 	@Inject
 	private VideoClient client;
@@ -16,7 +16,7 @@ public class GetVideosCommand implements Runnable {
 	@Override
 	public void run() {
 		for (Video i : client.list()) {
-			System.out.println(b);
+			System.out.println(i);
 		}
 	}
 }
