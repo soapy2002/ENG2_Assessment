@@ -1,5 +1,12 @@
 [
   {
+    "name" : "java.lang.Long",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
     "name" : "picocli.CommandLine$AutoHelpMixin",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -11,10 +18,145 @@
     ]
   },
   {
-    "name" : "uk.ac.york.eng2.videos.cli.videos.addVideoCommand",
+    "name" : "uk.ac.york.eng2.videos.cli.VideoCliCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "verbose" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.users.AddUserCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "username" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.users.DeleteUserCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.users.GetUserCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.users.GetUsersCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
     "allPublicMethods" : true
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.users.UpdateUserCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" },
+      { "name" : "username" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.addVideoCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "hashtag" },
+      { "name" : "title" },
+      { "name" : "user" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.addVideoViewerCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "userId" },
+      { "name" : "videoId" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.deleteVideoCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.deleteVideoViewerCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "userId" },
+      { "name" : "videoId" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.getVideoCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.getVideoViewerCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "id" }
+    ]
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.getVideosCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "uk.ac.york.eng2.videos.cli.videos.updateVideoCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "hashtag" },
+      { "name" : "id" },
+      { "name" : "title" },
+      { "name" : "user" }
+    ]
   }
 ]

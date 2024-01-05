@@ -34,4 +34,10 @@ public class VideoDTO {
 	public void setUser(String user) {
 		user = this.user;
 	}
+	
+
+	@Override
+	public String toString() {
+		return "VideoDTO [title=" + title + ", hashtag=" + hashtag + ", user=" + user + "]";
+	}
 }

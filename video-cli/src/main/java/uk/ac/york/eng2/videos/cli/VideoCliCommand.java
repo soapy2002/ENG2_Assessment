@@ -1,17 +1,17 @@
 package uk.ac.york.eng2.videos.cli;
 
 import io.micronaut.configuration.picocli.PicocliRunner;
-import io.micronaut.context.ApplicationContext;
-
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
-import picocli.CommandLine.Parameters;
+import uk.ac.york.eng2.videos.cli.videos.addVideoCommand;
 import uk.ac.york.eng2.videos.cli.videos.getVideosCommand;
+import io.micronaut.context.ApplicationContext;
+import picocli.CommandLine;
+import picocli.CommandLine.Parameters;
 
 @Command(name = "video-cli", description = "...",
         mixinStandardHelpOptions = true, 
-        subcommands = { getVideosCommand.class })
+        subcommands = { getVideosCommand.class, addVideoCommand.class })
 
 
 public class VideoCliCommand implements Runnable {

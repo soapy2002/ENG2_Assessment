@@ -1,5 +1,5 @@
 applicationType: default
-defaultPackage: uk.ac.york.eng2.socialMedia
+defaultPackage: uk.ac.york.eng2.videos
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle

@@ -6,7 +6,7 @@ datasources:
     driver-class-name: org.mariadb.jdbc.Driver
     db-type: mariadb
     dialect: MYSQL
-    url: jdbc:mariadb://localhost:3306/socialMedia
+    url: jdbc:mariadb://localhost:3306/videos
     username: todo
     password: todosecret
 netty:
@@ -17,7 +17,7 @@ jpa:
   default:
     entity-scan:
       packages:
-        uk.ac.york.eng2.socialMedia.domain
+        - uk.ac.york.eng2.videos.domain
     properties:
       hibernate:
         hbm2ddl:
