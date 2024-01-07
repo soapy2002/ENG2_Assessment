@@ -1,27 +1,28 @@
 package uk.ac.york.eng2.videos.dto;
 
-import javax.persistence.Column;
-
 import io.micronaut.serde.annotation.Serdeable;
 
 @Serdeable
 public class VideoDTO {
 
-	@Column(nullable = false)
-	private String hashtag;
-	
-	@Column(nullable = false)
+	private String[] hashtag;
+
 	private String title;
 	
-	@Column(nullable = false)
 	private String user;
 
-	public String getHashtag() {
+	private Integer views;
+
+	private Integer likes;
+
+	private Integer dislikes;
+
+	public String[] getHashtag() {
 		return hashtag;
 	}
 
-	public void setHashtag(String hashtag) {
-		hashtag = this.hashtag;
+	public void setHashtag(String[] hashtag) {
+		this.hashtag = hashtag;
 	}
 	
 	public String getTitle() {
@@ -29,7 +30,7 @@ public class VideoDTO {
 	}
 	
 	public void setTitle(String title) {
-		title = this.title;
+		this.title = title;
 	}
 	
 	public String getUser() {
@@ -37,6 +38,30 @@ public class VideoDTO {
 	}
 	
 	public void setUser(String user) {
-		user = this.user;
+		this.user = user;
+	}
+
+	public Integer getViews() {
+		return views;
+	}
+
+	public void setViews(Integer views) {
+		this.views = views;
+	}
+
+	public Integer getLikes() {
+		return likes;
+	}
+
+	public void setLikes(Integer likes) {
+		this.likes = likes;
+	}
+
+	public Integer getDislikes() {
+		return dislikes;
+	}
+
+	public void setDislikes(Integer dislikes) {
+		this.dislikes = dislikes;
 	}
 }

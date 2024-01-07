@@ -20,7 +20,7 @@ import uk.ac.york.eng2.videos.domain.User;
 import uk.ac.york.eng2.videos.domain.Video;
 import uk.ac.york.eng2.videos.dto.VideoDTO;
 
-@Controller("/Videos")
+@Controller("/videos")
 public class VideoController {
 	@Inject
 	VideoRepository repo;
@@ -35,15 +35,63 @@ public class VideoController {
 
 	@Post("/")
 	public HttpResponse<Void> add(@Body VideoDTO VideoDetails) { 
-		Video Video = new Video();
+		Video video = new Video();
 
-		Video.setHashtag(VideoDetails.getHashtag());
-		Video.setTitle(VideoDetails.getTitle());
-		Video.setUser(VideoDetails.getUser());
+		video.setHashtag(VideoDetails.getHashtag());
+		video.setTitle(VideoDetails.getTitle());
+		video.setUser(VideoDetails.getUser());
+		video.setLikes(0);
+		video.setDislikes(0);
+		video.setViews(0);
 
-		repo.save(Video);
+		repo.save(video);
 
-		return HttpResponse.created(URI.create("/Videos/" + Video.getId()));
+		return HttpResponse.created(URI.create("/videos/" + video.getId()));
+	}
+
+	@Transactional
+	@Put("/{title}")
+	public HttpResponse<Void> likeVideo(String title, @Body VideoDTO VideoDetails) {
+	Optional<Video> Video = repo.findByTitle(title);
+	if (Video.isEmpty()) {
+		return HttpResponse.notFound();
+	}
+
+	Video b = Video.get();
+	b.setLikes(VideoDetails.getLikes() + 1);
+
+	repo.update(b);
+	return HttpResponse.ok();
+	}
+
+	@Transactional
+	@Put("/{title}")
+	public HttpResponse<Void> dislikeVideo(String title, @Body VideoDTO VideoDetails) {
+	Optional<Video> Video = repo.findByTitle(title);
+	if (Video.isEmpty()) {
+		return HttpResponse.notFound();
+	}
+
+	Video b = Video.get();
+	b.setDislikes(VideoDetails.getDislikes() + 1);
+
+	repo.update(b);
+	return HttpResponse.ok();
+	}
+
+	@Transactional
+	@Put("/{title}")
+	public HttpResponse<Void> viewVideo(String title, @Body VideoDTO VideoDetails) {
+	Optional<Video> Video = repo.findByTitle(title);
+	if (Video.isEmpty()) {
+		return HttpResponse.notFound();
+	}
+
+	Video b = Video.get();
+	b.setViews(VideoDetails.getViews() + 1);
+
+	repo.update(b);
+	return HttpResponse.ok();
 	}
 
 	@Get("/{id}")

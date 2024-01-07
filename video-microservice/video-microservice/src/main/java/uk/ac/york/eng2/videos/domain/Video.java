@@ -21,13 +21,22 @@ class Video {
 	private Long id;
 
 	@Column(nullable = false)
-	private String hashtag;
+	private String[] hashtag;
 	
 	@Column(nullable = false)
 	private String title;
 	
 	@Column(nullable = false)
 	private String user;
+
+	@Column(nullable = false)
+	private Integer views = 0;
+
+	@Column(nullable = false)
+	private Integer likes;
+
+	@Column(nullable = false)
+	private Integer dislikes;
 
 	@JsonIgnore
 	@ManyToMany
@@ -38,15 +47,15 @@ class Video {
 	}
 	
 	public void setId(Long id) {
-		id = this.id;
+		this.id = id;
 	}
 
-	public String getHashtag() {
+	public String[] getHashtag() {
 		return hashtag;
 	}
 
-	public void setHashtag(String hashtag) {
-		hashtag = this.hashtag;
+	public void setHashtag(String[] hashtag) {
+		this.hashtag = hashtag;
 	}
 	
 	public String getTitle() {
@@ -54,7 +63,7 @@ class Video {
 	}
 	
 	public void setTitle(String title) {
-		title = this.title;
+		this.title = title;
 	}
 	
 	public String getUser() {
@@ -62,7 +71,7 @@ class Video {
 	}
 	
 	public void setUser(String user) {
-		user = this.user;
+		this.user = user;
 	}
 
 	public Set<User> getViewers() {
@@ -71,5 +80,29 @@ class Video {
 
 	public void setViewers(Set<User> viewers) {
 		this.viewers = viewers;
+	}
+
+	public Integer getViews() {
+		return views;
+	}
+
+	public void setViews(Integer views) {
+		this.views = views;
+	}
+
+	public Integer getLikes() {
+		return likes;
+	}
+
+	public void setLikes(Integer likes) {
+		this.likes = likes;
+	}
+
+	public Integer getDislikes() {
+		return dislikes;
+	}
+
+	public void setDislikes(Integer dislikes) {
+		this.dislikes = dislikes;
 	}
 }

@@ -7,7 +7,6 @@ import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.client.annotation.Client;
-import jakarta.inject.Inject;
 import uk.ac.york.eng2.videos.cli.domain.Video;
 import uk.ac.york.eng2.videos.cli.domain.User;
 import uk.ac.york.eng2.videos.cli.dto.VideoDTO;
@@ -16,13 +15,16 @@ import uk.ac.york.eng2.videos.cli.dto.VideoDTO;
 public interface VideoClient {
 	
 	@Get("/")
-	public Iterable<Video> list();
+	Iterable<Video> list();
 
 	@Post("/")
-	public HttpResponse<Void> add(@Body VideoDTO videoDetails);
+	HttpResponse<Void> add(@Body VideoDTO videoDetails);
 	
 	@Get("/{id}")
 	VideoDTO getVideo(long id);
+
+	@Put("/{id}")
+	HttpResponse<Void> likeVideo(Long id, @Body VideoDTO videoDetails);
 
 	@Put("/{id}")
 	HttpResponse<Void> updateVideo(long id, @Body VideoDTO videoDetails);

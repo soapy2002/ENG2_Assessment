@@ -16,6 +16,7 @@ public interface VideoRepository extends CrudRepository<Video, Long> {
 	@Join(value = "viewers", type = Join.Type.LEFT_FETCH)
 	@Override
 	Optional<Video> findById(@NotNull Long id);
+	Optional<Video> findByTitle(@NotNull String title);
 
 	Optional<VideoDTO> findOne(long id);
 }

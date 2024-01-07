@@ -18,64 +18,6 @@
     ]
   },
   {
-    "name" : "uk.ac.york.eng2.videos.cli.VideoCliCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "verbose" }
-    ]
-  },
-  {
-    "name" : "uk.ac.york.eng2.videos.cli.users.AddUserCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "username" }
-    ]
-  },
-  {
-    "name" : "uk.ac.york.eng2.videos.cli.users.DeleteUserCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "id" }
-    ]
-  },
-  {
-    "name" : "uk.ac.york.eng2.videos.cli.users.GetUserCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "id" }
-    ]
-  },
-  {
-    "name" : "uk.ac.york.eng2.videos.cli.users.GetUsersCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true
-  },
-  {
-    "name" : "uk.ac.york.eng2.videos.cli.users.UpdateUserCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "id" },
-      { "name" : "username" }
-    ]
-  },
-  {
     "name" : "uk.ac.york.eng2.videos.cli.videos.addVideoCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,

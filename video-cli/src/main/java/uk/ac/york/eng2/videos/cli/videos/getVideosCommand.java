@@ -5,9 +5,7 @@ import jakarta.inject.Inject;
 import uk.ac.york.eng2.videos.cli.domain.Video;
 
 
-@Command(name = "get-videos", description = "gets videos",
-        mixinStandardHelpOptions = true)
-
+@Command(name = "get-videos", description = "gets videos", mixinStandardHelpOptions = true)
 public class getVideosCommand implements Runnable {
 	
 	@Inject
@@ -15,8 +13,8 @@ public class getVideosCommand implements Runnable {
 
 	@Override
 	public void run() {
-		for (Video i : client.list()) {
-			System.out.println(i);
+		for (Video v : client.list()) {
+			System.out.println(v);
 		}
 	}
 }

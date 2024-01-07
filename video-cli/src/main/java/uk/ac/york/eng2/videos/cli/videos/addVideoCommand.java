@@ -15,7 +15,7 @@ public class addVideoCommand implements Runnable {
 	private String title;
 
 	@Parameters(index="1")
-	private String hashtag;
+	private String[] hashtag;
 	
 	@Parameters(index="2")
 	private String user;
@@ -26,6 +26,9 @@ public class addVideoCommand implements Runnable {
 		dto.setTitle(title);
 		dto.setHashtag(hashtag);
 		dto.setUser(user);
+		dto.setLikes(0);
+		dto.setDislikes(0);
+		dto.setViews(0);
 
 		HttpResponse<Void> response = client.add(dto);
 		System.out.println("Server responded with: " + response.getStatus());

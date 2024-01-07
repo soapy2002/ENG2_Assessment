@@ -17,7 +17,7 @@ public class updateVideoCommand implements Runnable {
 	private String title;
 
 	@Option(names = {"-ht", "--hashtag"}, description="video hashtags")
-	private String hashtag;
+	private String[] hashtag;
 	
 	@Option(names = {"-u", "--user"}, description="user who uploaded video")
 	private String user;
