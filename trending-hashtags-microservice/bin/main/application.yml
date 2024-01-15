@@ -1,0 +1,31 @@
+micronaut:
+  application:
+    name: trendingHashtagsMicroservice
+  server:
+    port: 8081
+datasources:
+  default:
+    driver-class-name: org.mariadb.jdbc.Driver
+    db-type: mariadb
+    dialect: MYSQL
+    url: jdbc:mariadb://${DB_HOST:`localhost:3307`}/${DB_NAME:trending-hashtags}
+    username: ${DB_USER:todo}
+    password: ${DB_PASSWORD:todosecret}
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - uk.ac.york.eng2.trending.domain
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: update
+kafka:
+  bootstrap:
+    servers: ${KAFKA_BOOTSTRAP_SERVERS:`localhost:9094`}
+netty:
+  default:
+    allocator:
+      max-order: 3
