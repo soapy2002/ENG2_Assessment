@@ -12,18 +12,20 @@ import uk.ac.york.eng2.videos.cli.videos.addVideoCommand;
 import uk.ac.york.eng2.videos.cli.videos.addVideoViewerCommand;
 import uk.ac.york.eng2.videos.cli.videos.deleteVideoCommand;
 import uk.ac.york.eng2.videos.cli.videos.deleteVideoViewerCommand;
+import uk.ac.york.eng2.videos.cli.videos.dislikeVideo;
 import uk.ac.york.eng2.videos.cli.videos.getVideoViewerCommand;
 import uk.ac.york.eng2.videos.cli.videos.getVideosCommand;
 import uk.ac.york.eng2.videos.cli.videos.likeVideo;
 import uk.ac.york.eng2.videos.cli.videos.getVideoCommand;
 import uk.ac.york.eng2.videos.cli.videos.updateVideoCommand;
+import uk.ac.york.eng2.videos.cli.videos.viewVideo;
 
 
 @Command(name = "video-cli", description = "...",
         mixinStandardHelpOptions = true, 
         subcommands = { getVideosCommand.class, addVideoCommand.class, getVideoCommand.class, updateVideoCommand.class, deleteVideoCommand.class,
         	GetUsersCommand.class, GetUserCommand.class, AddUserCommand.class, UpdateUserCommand.class, DeleteUserCommand.class,
-        	addVideoViewerCommand.class, getVideoViewerCommand.class, deleteVideoViewerCommand.class, likeVideo.class})
+        	addVideoViewerCommand.class, getVideoViewerCommand.class, deleteVideoViewerCommand.class, likeVideo.class, dislikeVideo.class, viewVideo.class})
 
 
 public class VideoCliCommand implements Runnable {

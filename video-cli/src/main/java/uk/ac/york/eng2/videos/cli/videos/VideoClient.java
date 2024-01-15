@@ -23,8 +23,14 @@ public interface VideoClient {
 	@Get("/{id}")
 	VideoDTO getVideo(long id);
 
-	@Put("/{id}")
-	HttpResponse<Void> likeVideo(Long id, @Body VideoDTO videoDetails);
+	@Put("/likes/{title}")
+	HttpResponse<Void> likeVideo(String title, @Body VideoDTO videoDetails);
+
+	@Put("/dislikes/{title}")
+	HttpResponse<Void> dislikeVideo(String title, @Body VideoDTO videoDetails);
+
+	@Put("/views/{title}")
+	HttpResponse<Void> viewVideo(String title, @Body VideoDTO videoDetails);
 
 	@Put("/{id}")
 	HttpResponse<Void> updateVideo(long id, @Body VideoDTO videoDetails);

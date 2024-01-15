@@ -3,6 +3,7 @@ package uk.ac.york.eng2.videos.controllers;
 
 import java.net.URI;
 import java.util.Optional;
+import java.util.UUID;
 
 import javax.transaction.Transactional;
 
@@ -16,6 +17,7 @@ import io.micronaut.http.annotation.Put;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.videos.repositories.VideoRepository;
 import uk.ac.york.eng2.videos.repositories.UserRepository;
+import uk.ac.york.eng2.videos.events.VideosProducer;
 import uk.ac.york.eng2.videos.domain.User;
 import uk.ac.york.eng2.videos.domain.Video;
 import uk.ac.york.eng2.videos.dto.VideoDTO;
@@ -27,6 +29,9 @@ public class VideoController {
 
 	@Inject
 	UserRepository userRepo;
+
+	@Inject
+	VideosProducer producer;
 	
 	@Get("/")
 	public Iterable<Video> list() {
@@ -40,17 +45,19 @@ public class VideoController {
 		video.setHashtag(VideoDetails.getHashtag());
 		video.setTitle(VideoDetails.getTitle());
 		video.setUser(VideoDetails.getUser());
-		video.setLikes(0);
-		video.setDislikes(0);
-		video.setViews(0);
+		video.setLikes(VideoDetails.getLikes());
+		video.setDislikes(VideoDetails.getDislikes());
+		video.setViews(VideoDetails.getViews());
 
 		repo.save(video);
+
+		producer.uploadedVideo(video.getTitle(), video);
 
 		return HttpResponse.created(URI.create("/videos/" + video.getId()));
 	}
 
 	@Transactional
-	@Put("/{title}")
+	@Put("/likes/{title}")
 	public HttpResponse<Void> likeVideo(String title, @Body VideoDTO VideoDetails) {
 	Optional<Video> Video = repo.findByTitle(title);
 	if (Video.isEmpty()) {
@@ -58,14 +65,16 @@ public class VideoController {
 	}
 
 	Video b = Video.get();
-	b.setLikes(VideoDetails.getLikes() + 1);
+	b.setLikes(Video.get().getLikes() + 1);
+	String eventId = UUID.randomUUID().toString();
 
 	repo.update(b);
+	producer.likedVideo(eventId, title, b);
 	return HttpResponse.ok();
 	}
 
 	@Transactional
-	@Put("/{title}")
+	@Put("/dislikes/{title}")
 	public HttpResponse<Void> dislikeVideo(String title, @Body VideoDTO VideoDetails) {
 	Optional<Video> Video = repo.findByTitle(title);
 	if (Video.isEmpty()) {
@@ -73,14 +82,15 @@ public class VideoController {
 	}
 
 	Video b = Video.get();
-	b.setDislikes(VideoDetails.getDislikes() + 1);
+	b.setDislikes(Video.get().getDislikes() + 1);
 
 	repo.update(b);
+	producer.dislikeVideo(title, b);
 	return HttpResponse.ok();
 	}
 
 	@Transactional
-	@Put("/{title}")
+	@Put("/views/{title}")
 	public HttpResponse<Void> viewVideo(String title, @Body VideoDTO VideoDetails) {
 	Optional<Video> Video = repo.findByTitle(title);
 	if (Video.isEmpty()) {
@@ -88,6 +98,7 @@ public class VideoController {
 	}
 
 	Video b = Video.get();
+	producer.watchVideo(title, b);
 	b.setViews(VideoDetails.getViews() + 1);
 
 	repo.update(b);
@@ -97,6 +108,11 @@ public class VideoController {
 	@Get("/{id}")
 	public VideoDTO getVideo(long id) {
 		return repo.findOne(id).orElse(null);
+	}
+
+	@Get("/title/{title}")
+	public Video getVideoByTitle(String title) {
+		return repo.findByTitle(title).orElse(null);
 	}
 
 	@Transactional
@@ -144,8 +160,8 @@ public class VideoController {
 
 	@Transactional
 	@Put("/{VideoId}/viewers/{userId}")
-	public HttpResponse<String> addViewer(long VideoId, long userId) {
-		Optional<Video> oVideo = repo.findById(VideoId);
+	public HttpResponse<String> addViewer(String title, long userId) {
+		Optional<Video> oVideo = repo.findByTitle(title);
 		if (oVideo.isEmpty()) {
 			return HttpResponse.notFound(String.format("Video %d not found", VideoId));
 		}

@@ -33,10 +33,10 @@ class Video {
 	private Integer views = 0;
 
 	@Column(nullable = false)
-	private Integer likes;
+	private Integer likes = 0;
 
 	@Column(nullable = false)
-	private Integer dislikes;
+	private Integer dislikes = 0;
 
 	@JsonIgnore
 	@ManyToMany

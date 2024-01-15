@@ -6,8 +6,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
 import uk.ac.york.eng2.videos.cli.dto.VideoDTO;
 
-@Command(name="like-video", description="likes a video", mixinStandardHelpOptions = true)
-public class likeVideo implements Runnable {
+@Command(name="view-video", description="views a video", mixinStandardHelpOptions = true)
+public class viewVideo implements Runnable {
 	@Inject
 	private VideoClient client;
 
@@ -19,10 +19,10 @@ public class likeVideo implements Runnable {
 
 		VideoDTO videoDetails = new VideoDTO();
 
-		videoDetails.setLikes(videoDetails.getLikes() + 1);
+		videoDetails.setLikes(videoDetails.getViews() + 1);
 
 
-		HttpResponse<Void> response = client.likeVideo(title, videoDetails);
+		HttpResponse<Void> response = client.viewVideo(title, videoDetails);
 		System.out.println("Server responded with: " + response.getStatus());
 	}
 }
