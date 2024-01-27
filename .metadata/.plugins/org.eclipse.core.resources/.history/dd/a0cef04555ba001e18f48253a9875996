@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="Y3887821_Final" version="12.0.0.2017041100">
+  <ownedViewpoints name="SocialMediaViewpointFinal">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" domainClass="Y3887821::Social" enablePopupBars="true">
+      <metamodel href="Y3887821#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ahh" semanticCandidatesExpression="feature:eventStream" domainClass="Y3887821::Social"/>
+        <containerMappings name="ah" semanticCandidatesExpression="feature:microservices" domainClass="Y3887821::Social">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="Y3887821_Final.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

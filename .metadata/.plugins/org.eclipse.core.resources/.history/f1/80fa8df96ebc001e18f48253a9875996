@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="Y3887821_Final" version="12.0.0.2017041100">
+  <ownedViewpoints name="SocialMediaViewpointFinal">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" initialisation="true" domainClass="Y3887821::Social" enablePopupBars="true">
+      <metamodel href="../../Y3887821/Y3887821.ecore#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="ah" sourceMapping="//@ownedViewpoints[name='SocialMediaViewpointFinal']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='Microservice'] //@ownedViewpoints[name='SocialMediaViewpointFinal']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']" targetMapping="//@ownedViewpoints[name='SocialMediaViewpointFinal']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name=''] //@ownedViewpoints[name='SocialMediaViewpointFinal']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='Microservice']" targetFinderExpression="feature:name" sourceFinderExpression="feature:produces" domainClass="Y3887821::Microservice" useDomainElement="true" pathExpression="feature:subscribesto">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings semanticCandidatesExpression="feature:eventStream" domainClass="Y3887821::EventStream">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Microservice" semanticCandidatesExpression="feature:microservices" domainClass="Y3887821::Microservice">
+          <subNodeMappings semanticCandidatesExpression="feature:domains" domainClass="Y3887821::Domain">
+            <style xsi:type="style:SquareDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="events" semanticCandidatesExpression="feature:events" domainClass="Y3887821::Event">
+            <style xsi:type="style:SquareDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="controllers" semanticCandidatesExpression="feature:controllers" domainClass="Y3887821::Controller">
+            <style xsi:type="style:SquareDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="http" semanticCandidatesExpression="feature:eAllContents" domainClass="Y3887821::HTTPResource">
+            <style xsi:type="style:DotDescription" labelSize="12" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="Y3887821_Final.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

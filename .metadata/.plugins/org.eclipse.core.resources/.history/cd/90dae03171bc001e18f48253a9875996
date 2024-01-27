@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Y3887821/src" modelPluginID="Y3887821" modelName="Y3887821"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Y3887821.ecore</foreignModel>
+  <genPackages prefix="Y3887821" disposableProviderFactory="true" ecorePackage="Y3887821.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Y3887821.ecore#//HTTPMethod">
+      <genEnumLiterals ecoreEnumLiteral="Y3887821.ecore#//HTTPMethod/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="Y3887821.ecore#//HTTPMethod/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="Y3887821.ecore#//HTTPMethod/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="Y3887821.ecore#//HTTPMethod/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="Y3887821.ecore#//Social">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Social/microservices"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//Microservice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Microservice/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Microservice/subscribesTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Microservice/publishesTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Microservice/httpResources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Microservice/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//Event/fields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Event/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//EventField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//EventField/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//EventField/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//EventStream">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//EventStream/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//EventStream/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//HTTPResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//HTTPResource/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Y3887821.ecore#//HTTPResource/response"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//HTTPResource/method"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//HTTPResource/endpoint"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//Request">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Request/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Request/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Request/description"/>
+    </genClasses>
+    <genClasses ecoreClass="Y3887821.ecore#//Response">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Response/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Response/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Y3887821.ecore#//Response/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

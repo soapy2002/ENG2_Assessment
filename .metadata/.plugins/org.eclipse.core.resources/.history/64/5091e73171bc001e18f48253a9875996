@@ -1,0 +1,7 @@
+package [%=m.name.toLowerCase()%];
+
+[%for (domains in Domain.all){%]
+
+class [%=domains.name%][%}%] {
+	
+}

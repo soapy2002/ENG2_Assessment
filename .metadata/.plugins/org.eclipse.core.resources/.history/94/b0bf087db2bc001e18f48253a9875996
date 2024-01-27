@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_55ShQLykEe6R8P0LTmbuZQ">
+  <microservices xmi:id="_6-GNMLykEe6R8P0LTmbuZQ" produces="_bqPy8LyoEe6R8P0LTmbuZQ _ahXfULyoEe6R8P0LTmbuZQ _bJM7YLyoEe6R8P0LTmbuZQ _cKO6kLyoEe6R8P0LTmbuZQ" name="Video Microservice">
+    <events xmi:id="_-yJtoLykEe6R8P0LTmbuZQ" name="video-uploaded" type="String"/>
+    <events xmi:id="__YLy4LykEe6R8P0LTmbuZQ" name="video-liked" type="String"/>
+    <events xmi:id="_AD_wALylEe6R8P0LTmbuZQ" name="video-disliked" type="String"/>
+    <events xmi:id="_ArVc0LylEe6R8P0LTmbuZQ" name="video-watched" type="String"/>
+    <domains xmi:id="_9VneMLykEe6R8P0LTmbuZQ" name="Video">
+      <fields xmi:id="_KnEGILylEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_LKHv4LylEe6R8P0LTmbuZQ" name="hashtag" type="String"/>
+      <fields xmi:id="_SOoUcLylEe6R8P0LTmbuZQ" name="title" type="String"/>
+      <fields xmi:id="_SzRSkLylEe6R8P0LTmbuZQ" name="user" type="String"/>
+      <fields xmi:id="_TUeiMLylEe6R8P0LTmbuZQ" name="views" type="Integer"/>
+      <fields xmi:id="_DgJb4LynEe6R8P0LTmbuZQ" name="likes" type="Integer"/>
+      <fields xmi:id="_El2fsLynEe6R8P0LTmbuZQ" name="dislikes" type="Integer"/>
+      <fields xmi:id="_FJTyELynEe6R8P0LTmbuZQ" name="viewers" type="Set&lt;User>"/>
+    </domains>
+    <domains xmi:id="_9_80oLykEe6R8P0LTmbuZQ" name="User">
+      <fields xmi:id="_QNZxoLynEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_Q8CZQLynEe6R8P0LTmbuZQ" name="username" type="String"/>
+      <fields xmi:id="_RhlWULynEe6R8P0LTmbuZQ" name="watchedVideos" type="Set&lt;Video>"/>
+    </domains>
+    <controllers xmi:id="_8PIXQLykEe6R8P0LTmbuZQ" name="VideoController"/>
+    <controllers xmi:id="_8yGhcLykEe6R8P0LTmbuZQ" name="UserController"/>
+    <httpResources xmi:id="_BRSCgLylEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_B1oFsLylEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_CYHuwLylEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_C9AkgLylEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_tG5FcLynEe6R8P0LTmbuZQ" consumes="_bqPy8LyoEe6R8P0LTmbuZQ _bJM7YLyoEe6R8P0LTmbuZQ _ahXfULyoEe6R8P0LTmbuZQ" name="Trending Microservice">
+    <events xmi:id="_waIX0LynEe6R8P0LTmbuZQ" name="trending-by-hour"/>
+    <domains xmi:id="_vKn3wLynEe6R8P0LTmbuZQ" name="Trending">
+      <fields xmi:id="_9JCTYLynEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_9unFoLynEe6R8P0LTmbuZQ" name="hashtag" type="String"/>
+      <fields xmi:id="__ahN0LynEe6R8P0LTmbuZQ" name="likes" type="Integer"/>
+    </domains>
+    <controllers xmi:id="_vvBlULynEe6R8P0LTmbuZQ" name="TrendingController"/>
+    <httpResources xmi:id="_yJ2B8LynEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_tp0zYLynEe6R8P0LTmbuZQ" consumes="_cKO6kLyoEe6R8P0LTmbuZQ" produces="_crtP8LyoEe6R8P0LTmbuZQ _dcXQ0LyoEe6R8P0LTmbuZQ" name="Subscription Microservice">
+    <events xmi:id="_1P2JkLynEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_15SvMLynEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_2oA2YLynEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_3OvfMLynEe6R8P0LTmbuZQ"/>
+    <domains xmi:id="_0Xvc4LynEe6R8P0LTmbuZQ" name="Subscriptions">
+      <fields xmi:id="_K3RvkLypEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_N9ddYLypEe6R8P0LTmbuZQ" name="username" type="String"/>
+      <fields xmi:id="_OkzKMLypEe6R8P0LTmbuZQ"/>
+      <fields xmi:id="_PJWowLypEe6R8P0LTmbuZQ"/>
+    </domains>
+    <controllers xmi:id="_zyCHwLynEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_3y7xYLynEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_4aoqkLynEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <eventStream xmi:id="_ahXfULyoEe6R8P0LTmbuZQ" name="Video Uploaded" subscribesto="_tG5FcLynEe6R8P0LTmbuZQ" publishesto="_6-GNMLykEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_bJM7YLyoEe6R8P0LTmbuZQ" name="Video Liked" subscribesto="_tG5FcLynEe6R8P0LTmbuZQ" publishesto="_6-GNMLykEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_bqPy8LyoEe6R8P0LTmbuZQ" name="Video Disliked" subscribesto="_tG5FcLynEe6R8P0LTmbuZQ" publishesto="_6-GNMLykEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_cKO6kLyoEe6R8P0LTmbuZQ" name="Video Viewed" subscribesto="_tp0zYLynEe6R8P0LTmbuZQ" publishesto="_6-GNMLykEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_crtP8LyoEe6R8P0LTmbuZQ" name="Subscribed" publishesto="_tp0zYLynEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_dcXQ0LyoEe6R8P0LTmbuZQ" name="Unsubscribed" publishesto="_tp0zYLynEe6R8P0LTmbuZQ"/>
+</Social>

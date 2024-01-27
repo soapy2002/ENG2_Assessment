@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_Sh-rQLfkEe6R8P0LTmbuZQ">
+  <microservices xmi:id="_UGtNYLfkEe6R8P0LTmbuZQ" publishesTo="_TF7F0LfkEe6R8P0LTmbuZQ _Twa0ULfkEe6R8P0LTmbuZQ _TdHd0LfkEe6R8P0LTmbuZQ _VUSa0LfkEe6R8P0LTmbuZQ" name="Video Microservice">
+    <events xmi:id="_YNdAULfkEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_Yq6YYLfkEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_puIhcLfnEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_qaTD4LfnEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_rRE64LfnEe6R8P0LTmbuZQ" method="POST"/>
+    <httpResources xmi:id="_tXzW0LfnEe6R8P0LTmbuZQ" method="PUT"/>
+    <httpResources xmi:id="_t0Wv8LfnEe6R8P0LTmbuZQ" method="DELETE"/>
+  </microservices>
+  <microservices xmi:id="_UdWy0LfkEe6R8P0LTmbuZQ" subscribesTo="_Twa0ULfkEe6R8P0LTmbuZQ _VUSa0LfkEe6R8P0LTmbuZQ _TF7F0LfkEe6R8P0LTmbuZQ" name="Trending Hashtags Microservice">
+    <events xmi:id="_rJvR4LfpEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_sTu_0LfpEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_suBvILfpEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_U7MlYLfkEe6R8P0LTmbuZQ" subscribesTo="_TdHd0LfkEe6R8P0LTmbuZQ" publishesTo="_VnXH0LfkEe6R8P0LTmbuZQ _WEfvwLfkEe6R8P0LTmbuZQ" name="Subscriptions Microservice">
+    <events xmi:id="_wFdlALfpEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_wmoYYLfpEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_yHXyYLfpEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <eventStream xmi:id="_TF7F0LfkEe6R8P0LTmbuZQ" name="Video Uploaded"/>
+  <eventStream xmi:id="_TdHd0LfkEe6R8P0LTmbuZQ" name="Video Viewed"/>
+  <eventStream xmi:id="_Twa0ULfkEe6R8P0LTmbuZQ" name="Video Liked"/>
+  <eventStream xmi:id="_VUSa0LfkEe6R8P0LTmbuZQ" name="Video Disliked"/>
+  <eventStream xmi:id="_VnXH0LfkEe6R8P0LTmbuZQ" name="Subscribed"/>
+  <eventStream xmi:id="_WEfvwLfkEe6R8P0LTmbuZQ" name="Unsubscribed"/>
+</Social>

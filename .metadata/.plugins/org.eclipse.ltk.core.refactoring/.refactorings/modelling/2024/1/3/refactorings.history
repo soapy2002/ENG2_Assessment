@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Y3887822.model&apos; to &apos;modelling&apos;" description="Move &apos;Y3887822.model&apos; to &apos;modelling&apos;" destination="/modelling" element1="/Y3887821/Y3887822.model" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1705842258702" updateReferences="true"/>
+</session>

@@ -85,6 +85,9 @@ public class VideoControllersTest {
 		b.setTitle("Container Security");
 		b.setHashtag("a, b, c");
 		b.setUser("Beth123");
+		b.setLikes(0);
+		b.setDislikes(0);
+		b.setViews(0);
 		repo.save(b);
 
 		VideoDTO videoDTO = client.getVideo(b.getId());
@@ -105,6 +108,9 @@ public class VideoControllersTest {
 		b.setTitle("Container Security");
 		b.setHashtag("a, b, c");
 		b.setUser("Beth123");
+		b.setLikes(0);
+		b.setDislikes(0);
+		b.setViews(0);
 		repo.save(b);
 
 		final String newTitle = "New Title";
@@ -123,6 +129,9 @@ public class VideoControllersTest {
 		b.setTitle("Container Security");
 		b.setHashtag("a, b, c");
 		b.setUser("Beth123");
+		b.setLikes(0);
+		b.setDislikes(0);
+		b.setViews(0);
 		repo.save(b);
 
 		HttpResponse<Void> response = client.deleteVideo(b.getId());

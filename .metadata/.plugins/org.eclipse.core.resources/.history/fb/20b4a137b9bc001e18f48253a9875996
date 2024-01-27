@@ -1,0 +1,9 @@
+
+[%for (microservice in Microservices.all){%]
+[%for (domains in microservice.Domain){%]
+
+class [%=domains.name%][%}%][%}%] {
+	[%for (fields in Fields.all){%]
+	private [%=fields.type%] [%=fields.name%]
+	[%}%]
+}

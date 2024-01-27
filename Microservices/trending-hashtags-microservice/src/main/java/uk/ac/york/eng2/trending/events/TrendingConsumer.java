@@ -2,6 +2,9 @@ package uk.ac.york.eng2.trending.events;
 
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import io.micronaut.configuration.kafka.annotation.KafkaKey;
 import io.micronaut.configuration.kafka.annotation.KafkaListener;
@@ -48,6 +51,8 @@ public class TrendingConsumer {
             Trending t = Trending.get();
             t.setLikes(t.getLikes() + 1);
             repo.update(t);
+            ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+            executorService.scheduleAtFixedRate(() -> t.setLikes(t.getLikes() - 1), 0, 1, TimeUnit.HOURS);
         }
         
         System.out.println("Video liked:" + id + " hashtags" + hashtags);

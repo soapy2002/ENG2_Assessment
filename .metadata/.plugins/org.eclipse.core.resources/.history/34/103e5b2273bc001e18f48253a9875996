@@ -1,0 +1,13 @@
+rule Domain2Java transform d : Domain {
+	template: "Domain2Java.egl"
+	
+	parameters : Map{}
+	
+	target: outputDirectory + "/Domains" + d.name.ftuc() + ".java"
+}
+
+rule Controller2Java transform c : Controller {
+	template: "system2database.egl"
+	
+	target: outputDirectory + "/init/01.sql"
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="Y3887821" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_L1iXELhVEe6R8P0LTmbuZQ" selectedViews="_1nv94LhiEe6R8P0LTmbuZQ" version="14.5.1.202106111100">
+    <semanticResources>Y3887822.model</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_5Q2hoLhZEe6R8P0LTmbuZQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/Y3887821.design/description/Y3887821.odesign#//@ownedViewpoints[name='SocialMediaViewpoint']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_1nv94LhiEe6R8P0LTmbuZQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ApvEoLhjEe6R8P0LTmbuZQ" name="new " repPath="#_Apt2gLhjEe6R8P0LTmbuZQ" changeId="339208d9-c14d-441f-b30a-8d4d3781ad7b">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']"/>
+        <target xmi:type="Social" href="Y3887822.model#_NPqywLhVEe6R8P0LTmbuZQ"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_Apt2gLhjEe6R8P0LTmbuZQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Ap9HELhjEe6R8P0LTmbuZQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Ap9HEbhjEe6R8P0LTmbuZQ" type="Sirius" element="_Apt2gLhjEe6R8P0LTmbuZQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Ar3yoLhjEe6R8P0LTmbuZQ" type="2002" element="_AqWvsLhjEe6R8P0LTmbuZQ">
+          <children xmi:type="notation:Node" xmi:id="_AsjvILhjEe6R8P0LTmbuZQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_AskWMLhjEe6R8P0LTmbuZQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_H07gALhjEe6R8P0LTmbuZQ" type="3007" element="_H0c-4LhjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1JicLhjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1JicbhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1VvsLhjEe6R8P0LTmbuZQ" type="3003" element="_H0dl8LhjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1VvsbhjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1VvsrhjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H07gAbhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H07gArhjEe6R8P0LTmbuZQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_H1KJgLhjEe6R8P0LTmbuZQ" type="3007" element="_H0dl8rhjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1KJg7hjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1KJhLhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1Vvs7hjEe6R8P0LTmbuZQ" type="3003" element="_H0dl87hjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1VvtLhjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1VvtbhjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H1KJgbhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1KJgrhjEe6R8P0LTmbuZQ" x="90" y="29" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_H1KJhbhjEe6R8P0LTmbuZQ" type="3007" element="_H0eNALhjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1KJiLhjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1KJibhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1WWwLhjEe6R8P0LTmbuZQ" type="3003" element="_H0eNAbhjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1WWwbhjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1WWwrhjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H1KJhrhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1KJh7hjEe6R8P0LTmbuZQ" x="180" y="29" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_H1KJirhjEe6R8P0LTmbuZQ" type="3007" element="_H0eNA7hjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1KwkLhjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1KwkbhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1WWw7hjEe6R8P0LTmbuZQ" type="3003" element="_H0eNBLhjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1WWxLhjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1WWxbhjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H1KJi7hjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1KJjLhjEe6R8P0LTmbuZQ" x="270" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_AskWMbhjEe6R8P0LTmbuZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_AskWMrhjEe6R8P0LTmbuZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Ar3yobhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ar3yorhjEe6R8P0LTmbuZQ" x="75" y="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AsoAkLhjEe6R8P0LTmbuZQ" type="2002" element="_ArjCgLhjEe6R8P0LTmbuZQ">
+          <children xmi:type="notation:Node" xmi:id="_AsoAk7hjEe6R8P0LTmbuZQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_AsoAlLhjEe6R8P0LTmbuZQ" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_AsoAlbhjEe6R8P0LTmbuZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_AsoAlrhjEe6R8P0LTmbuZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AsoAkbhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsoAkrhjEe6R8P0LTmbuZQ" x="340" y="200" width="255"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AsoAl7hjEe6R8P0LTmbuZQ" type="2002" element="_ArjpkbhjEe6R8P0LTmbuZQ">
+          <children xmi:type="notation:Node" xmi:id="_AsonoLhjEe6R8P0LTmbuZQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_AsonobhjEe6R8P0LTmbuZQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_H1WWxrhjEe6R8P0LTmbuZQ" type="3007" element="_H0eNBrhjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1WWybhjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1WWyrhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1drgrhjEe6R8P0LTmbuZQ" type="3003" element="_H0eNB7hjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1drg7hjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1drhLhjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H1WWx7hjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1WWyLhjEe6R8P0LTmbuZQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_H1dEcLhjEe6R8P0LTmbuZQ" type="3007" element="_H0e0EbhjEe6R8P0LTmbuZQ">
+              <children xmi:type="notation:Node" xmi:id="_H1drgLhjEe6R8P0LTmbuZQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_H1drgbhjEe6R8P0LTmbuZQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_H1drhbhjEe6R8P0LTmbuZQ" type="3003" element="_H0e0ErhjEe6R8P0LTmbuZQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_H1drhrhjEe6R8P0LTmbuZQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1drh7hjEe6R8P0LTmbuZQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_H1dEcbhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1dEcrhjEe6R8P0LTmbuZQ" x="140" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_AsonorhjEe6R8P0LTmbuZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Asono7hjEe6R8P0LTmbuZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AsoAmLhjEe6R8P0LTmbuZQ" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AsoAmbhjEe6R8P0LTmbuZQ" x="490" y="80"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Ap9HErhjEe6R8P0LTmbuZQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ArjplLhjEe6R8P0LTmbuZQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ArjplbhjEe6R8P0LTmbuZQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_AqWvsLhjEe6R8P0LTmbuZQ" name="Video Microservice">
+      <target xmi:type="Microservice" href="Y3887822.model#_OdpBwLhVEe6R8P0LTmbuZQ"/>
+      <semanticElements xmi:type="Microservice" href="Y3887822.model#_OdpBwLhVEe6R8P0LTmbuZQ"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ArTK4LhjEe6R8P0LTmbuZQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0c-4LhjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_SC0_wLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_SC0_wLhVEe6R8P0LTmbuZQ"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0dl8LhjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0dl8rhjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_SXMtQLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_SXMtQLhVEe6R8P0LTmbuZQ"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0dl87hjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0eNALhjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_Sq4eQLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_Sq4eQLhVEe6R8P0LTmbuZQ"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0eNAbhjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0eNA7hjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_TN0zQLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_TN0zQLhVEe6R8P0LTmbuZQ"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0eNBLhjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ArjCgLhjEe6R8P0LTmbuZQ" name="Trending Hashtags Microservice">
+      <target xmi:type="Microservice" href="Y3887822.model#_O2N50LhVEe6R8P0LTmbuZQ"/>
+      <semanticElements xmi:type="Microservice" href="Y3887822.model#_O2N50LhVEe6R8P0LTmbuZQ"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ArjCgbhjEe6R8P0LTmbuZQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ArjpkbhjEe6R8P0LTmbuZQ" name="Subscription Microservice">
+      <target xmi:type="Microservice" href="Y3887822.model#_PLQ8wLhVEe6R8P0LTmbuZQ"/>
+      <semanticElements xmi:type="Microservice" href="Y3887822.model#_PLQ8wLhVEe6R8P0LTmbuZQ"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ArjpkrhjEe6R8P0LTmbuZQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0eNBrhjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_WpPxQLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_WpPxQLhVEe6R8P0LTmbuZQ"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0eNB7hjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_H0e0EbhjEe6R8P0LTmbuZQ" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="Event" href="Y3887822.model#_W63swLhVEe6R8P0LTmbuZQ"/>
+        <semanticElements xmi:type="Event" href="Y3887822.model#_W63swLhVEe6R8P0LTmbuZQ"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_H0e0ErhjEe6R8P0LTmbuZQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer/@containerMappings[name='']/@subNodeMappings[name='']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ApudkLhjEe6R8P0LTmbuZQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/help.design/description/help.odesign#//@ownedViewpoints[name='SocialViewpoint']/@ownedRepresentations[name='']/@defaultLayer"/>
+    <target xmi:type="Social" href="Y3887822.model#_NPqywLhVEe6R8P0LTmbuZQ"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

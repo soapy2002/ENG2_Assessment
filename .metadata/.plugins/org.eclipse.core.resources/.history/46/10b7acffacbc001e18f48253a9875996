@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_JcHdULyiEe6R8P0LTmbuZQ">
+  <microservices xmi:id="_NLR2sLyiEe6R8P0LTmbuZQ" name="Subscription Microservice"/>
+  <microservices xmi:id="_NulYELyiEe6R8P0LTmbuZQ" name="Trending Hashtags Microservice"/>
+  <microservices xmi:id="_TCs9ELyiEe6R8P0LTmbuZQ" name="Video Microservice"/>
+  <eventStream xmi:id="_Kofw4LyiEe6R8P0LTmbuZQ" name="Video Uploaded"/>
+  <eventStream xmi:id="_LW_OkLyiEe6R8P0LTmbuZQ" name="Video Liked"/>
+  <eventStream xmi:id="_L6kcwLyiEe6R8P0LTmbuZQ" name="Video Disliked"/>
+  <eventStream xmi:id="_Mp19kLyiEe6R8P0LTmbuZQ" name="Video Viewed"/>
+  <eventStream xmi:id="_Q796ELyiEe6R8P0LTmbuZQ" name="Subscribed"/>
+  <eventStream xmi:id="_R1DeMLyiEe6R8P0LTmbuZQ" name="Unsubscribed"/>
+</Social>

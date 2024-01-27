@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_JQ1sELXsEe6PmKtvN5QPKg">
+  <microservices xmi:id="_KQ9FQLXsEe6PmKtvN5QPKg" name="Video Microservice">
+    <events xmi:id="_aqPA0LXsEe6PmKtvN5QPKg" name="add video"/>
+    <events xmi:id="_J_qYkLX6Ee6PmKtvN5QPKg" name="view video"/>
+    <events xmi:id="_Kof6MLX6Ee6PmKtvN5QPKg" name="like video"/>
+    <events xmi:id="_LSDNgLX6Ee6PmKtvN5QPKg" name="dislike video"/>
+    <publishesTo xmi:id="_b5Q3YLX6Ee6PmKtvN5QPKg"/>
+    <httpResources xmi:id="_xyso0LX6Ee6PmKtvN5QPKg"/>
+  </microservices>
+  <microservices xmi:id="_QLctwLXsEe6PmKtvN5QPKg" name="Trending Hashtags Microservice">
+    <subscribesTo xmi:id="_dVngoLX6Ee6PmKtvN5QPKg"/>
+    <httpResources xmi:id="_ysU_gLX6Ee6PmKtvN5QPKg"/>
+  </microservices>
+  <microservices xmi:id="_P0TZELXsEe6PmKtvN5QPKg" name="Subscriptions Microservice">
+    <events xmi:id="_bfyv0LXsEe6PmKtvN5QPKg" name="Subscribe"/>
+    <events xmi:id="_Tck-8LX6Ee6PmKtvN5QPKg" name="unsubscribe"/>
+    <publishesTo xmi:id="_woZ_8LX6Ee6PmKtvN5QPKg"/>
+    <httpResources xmi:id="_zEIbgLX6Ee6PmKtvN5QPKg"/>
+  </microservices>
+</Social>

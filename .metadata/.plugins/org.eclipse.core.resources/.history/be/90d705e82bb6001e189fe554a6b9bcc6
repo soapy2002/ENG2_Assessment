@@ -1,0 +1,21 @@
+<?nsuri Y3887821?>
+<?render-egx picto/Y3887821.egx?>
+<Social>
+  <Microservice name = "Video Microservice">
+  	<Event name="add videos"/>
+  	<Event name="view videos"/>
+  	<Event name="like videos"/>
+  	<Event name="dislike videos"/>
+  	<EventStream type="produces"/>
+  <Microservice/> 
+  <Microservice name = "Trending Hashtags Microservice">
+  	<EventStream type="consumes"/>
+  <Microservice/>
+  <Microservice name = "Subscriptions Microservice">
+  	<Event name="subscribe"/>
+  	<Event name="unsubscribe"/>
+  	<EventStream type="produces"/>
+  	<EventStream type="consumes"/>
+  <Microservice/>
+<Social/>
+ 

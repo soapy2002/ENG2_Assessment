@@ -43,7 +43,7 @@ public class TrendingStreams {
 			.stream("video-liked", Consumed.with(Serdes.Long(), Serdes.String()));
 
 		KStream<WindowedIdentifier, Long> stream = trendingStream.groupByKey(Grouped.with(Serdes.Long(), Serdes.String()))
-			.windowedBy(TimeWindows.of(Duration.ofMinutes(1)).advanceBy(Duration.ofMinutes(1)))
+			.windowedBy(TimeWindows.of(Duration.ofHours(1)).advanceBy(Duration.ofHours(1)))
 			.count(Materialized.as("trending-by-hour"))
 			.toStream()
 			.selectKey((k, v) -> new WindowedIdentifier(k.key(), k.window().start(), k.window().end()));

@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+C:\Users\sophi\eclipse\epsilon-2-43\workspace\.metadata\.plugins\org.eclipse.jdt.core
+857285317.index
+2049805288.index
+3930228556.index
+3705175637.index
+1786065881.index
+3090168015.index
+849840463.index
+1865797976.index
+601859858.index
+1574855428.index
+2416148422.index
+3586939201.index
+1358060776.index
+283230443.index
+150887466.index
+3123486517.index
+991025882.index

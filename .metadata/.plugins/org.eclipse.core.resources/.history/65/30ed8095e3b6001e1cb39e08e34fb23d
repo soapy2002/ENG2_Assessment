@@ -1,0 +1,9 @@
+@namespace(uri="Y3887821", prefix="Y3887821")
+
+context Social {
+    //check that the system has at least one microservice
+    constraint AtLeastOneService{
+        check: self.microservices.size() > 0
+    }
+}
+

@@ -1,0 +1,63 @@
+@namespace(uri="Y3887821", prefix="")
+package Y3887821;
+
+class Social {
+  val Microservice[*] microservices;
+  val EventStream[*] eventStream;
+}
+
+// Microservice
+class Microservice {
+  val Event[*] events;
+  val Domain[*] domains;
+  val Controller[*] controllers;
+  ref EventStream[*]#subscribesto consumes;
+  ref EventStream[*]#publishesto produces;
+  val HTTPResource[*] httpResources;
+  attr String name;
+}
+
+class Event {
+  attr String name;
+  attr String type;
+}
+
+class EventStream {
+  attr String name;
+  ref Microservice#consumes subscribesto;
+  ref Microservice#produces publishesto;
+}
+
+class HTTPResource {
+  val Request[*] request;
+  val Response[*] response;
+  attr HTTPMethod method;
+  attr String endpoint;
+}
+
+enum HTTPMethod {
+  GET;
+  POST; 
+  PUT;
+  DELETE;
+}
+
+class Request {
+  attr String name;
+  attr String type;
+  attr String description;
+}
+
+class Response {
+  attr String name;
+  attr String type;
+  attr String description;
+}
+
+class Domain {
+  attr String name;
+}
+
+class Controller {
+  attr String name;
+}

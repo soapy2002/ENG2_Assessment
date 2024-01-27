@@ -49,7 +49,6 @@ public class VideoController {
 		video.setLikes(VideoDetails.getLikes());
 		video.setDislikes(VideoDetails.getDislikes());
 		video.setViews(VideoDetails.getViews());
-		video.setViewers(VideoDetails.getViewers());
 
 		repo.save(video);
 

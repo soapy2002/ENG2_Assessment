@@ -1,0 +1,11 @@
+@namespace(uri="Y3887821", prefix="Y3887821")
+
+context Microservice {
+	
+	// Check that state names consist
+	// of a single character
+	constraint OneCharacter {
+		check: self.name.length() = 1
+		message: "State names must be one character long"
+	}
+}

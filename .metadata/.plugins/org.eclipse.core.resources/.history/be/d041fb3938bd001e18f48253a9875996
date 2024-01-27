@@ -1,0 +1,45 @@
+@namespace(uri="Y3887821", prefix="Y3887821")
+
+context Social {
+    //check that the system has at least one microservice
+    constraint AtLeastOneService{
+        check: self.microservices.size() > 0
+    }
+}
+
+context Microservice {
+	
+	// Check that state names consist
+	// of a single character
+	constraint OneCharacter {
+		check: self.name.length() > 1
+		message: "Microservice names must be at least character long"
+	}
+	
+	constraint HasAHealthEndpoint{
+        check: self.endpoints.collect(e|e.method = "GET" and e.request.body.size() = 0).size() > 0
+        message: "each microservice needs a health endpoint with no request"    
+    }
+}
+
+context Event {
+    // every event should be used in at least one stream
+  constraint EventIsUsedInAStream{ 
+    check: EventStream.all.event.includes(self)
+    message: "every event should be used in a stream"
+  }
+}
+
+context EventStream {
+    // every eventStream should have at least one subscriber
+    constraint HasAConsumer {
+        check: self.consumes.size() > 0
+        message: "an event stream must have at least one consumer"
+    }
+    
+    // every eventStream should have at least one publisher
+    constraint HasAProducer {
+        check: self.produces.size() > 0
+        message: "an event stream must have at least one producer"
+    }
+}

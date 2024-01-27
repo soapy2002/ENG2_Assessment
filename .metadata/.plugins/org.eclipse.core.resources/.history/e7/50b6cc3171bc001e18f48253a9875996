@@ -1,0 +1,5 @@
+[%for (domains in Domain.all){%]
+
+public class [%=domains.name%][%}%]Controller {
+
+}

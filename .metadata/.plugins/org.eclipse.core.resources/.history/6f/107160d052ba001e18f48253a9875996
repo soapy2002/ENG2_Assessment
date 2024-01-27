@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_Sg8R0LpHEe6R8P0LTmbuZQ">
+  <microservices xmi:id="_TDm6ALpHEe6R8P0LTmbuZQ" name="Video Microservice">
+    <events xmi:id="_ZOquELpHEe6R8P0LTmbuZQ" name="uploadedVideo"/>
+    <events xmi:id="_ZkplILpHEe6R8P0LTmbuZQ" name="likedVideo"/>
+    <events xmi:id="_Z4PPgLpHEe6R8P0LTmbuZQ" name="dislikedVideo"/>
+    <events xmi:id="_bKuLELpHEe6R8P0LTmbuZQ" name="watchVideo"/>
+    <domains xmi:id="_YAtGILpHEe6R8P0LTmbuZQ" name="Video">
+      <fields xmi:id="_c5qZILpHEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_bwQroLpIEe6R8P0LTmbuZQ" name="Title" type="String"/>
+      <fields xmi:id="_dg_pcLpIEe6R8P0LTmbuZQ" name="Hashtag" type="String"/>
+      <fields xmi:id="_i14qgLpIEe6R8P0LTmbuZQ" name="User" type="String"/>
+      <fields xmi:id="_lWqlMLpIEe6R8P0LTmbuZQ" name="Views" type="Integer"/>
+      <fields xmi:id="_nqkhgLpIEe6R8P0LTmbuZQ" name="Likes" type="Integer"/>
+      <fields xmi:id="_pV1wgLpIEe6R8P0LTmbuZQ" name="Dislikes" type="Integer"/>
+      <fields xmi:id="_rUVdgLpIEe6R8P0LTmbuZQ" name="Viewers" type="Set&lt;User>"/>
+    </domains>
+    <domains xmi:id="_YTOZgLpHEe6R8P0LTmbuZQ" name="User">
+      <fields xmi:id="_dNCoILpHEe6R8P0LTmbuZQ" name="id" type="Long"/>
+      <fields xmi:id="_HwRSoLpJEe6R8P0LTmbuZQ" name="Username" type="String"/>
+      <fields xmi:id="_KaHCsLpJEe6R8P0LTmbuZQ" name="Viewed" type="Set&lt;Videos>"/>
+    </domains>
+    <controllers xmi:id="_YjVSELpHEe6R8P0LTmbuZQ" name="VideoController">
+      <fields xmi:id="_dgK_gLpHEe6R8P0LTmbuZQ"/>
+    </controllers>
+    <controllers xmi:id="_Y1WPILpHEe6R8P0LTmbuZQ" name="UserController">
+      <fields xmi:id="_d0uTMLpHEe6R8P0LTmbuZQ"/>
+    </controllers>
+    <httpResources xmi:id="_beL5oLpHEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_byjAELpHEe6R8P0LTmbuZQ" method="DELETE"/>
+    <httpResources xmi:id="_cI5qkLpHEe6R8P0LTmbuZQ" method="POST"/>
+    <httpResources xmi:id="_cc92ELpHEe6R8P0LTmbuZQ" method="PUT"/>
+  </microservices>
+  <microservices xmi:id="_TjgiELpHEe6R8P0LTmbuZQ" name="Trending Hashtags Microservice">
+    <events xmi:id="_vsgNELpHEe6R8P0LTmbuZQ" name="uploadedVideo"/>
+    <events xmi:id="_wI4nELpHEe6R8P0LTmbuZQ" name="likedVideo"/>
+    <events xmi:id="_wVUOoLpJEe6R8P0LTmbuZQ" name="dislikedVideo"/>
+    <domains xmi:id="_gF2BQLpHEe6R8P0LTmbuZQ" name="Trending">
+      <fields xmi:id="_oeKXELpHEe6R8P0LTmbuZQ"/>
+    </domains>
+    <controllers xmi:id="_fymVILpHEe6R8P0LTmbuZQ" name="TrendingController">
+      <fields xmi:id="_owT3ALpHEe6R8P0LTmbuZQ"/>
+    </controllers>
+    <httpResources xmi:id="_p6t0oLpHEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_UhAFELpHEe6R8P0LTmbuZQ" name="Subscription Microservice">
+    <events xmi:id="_u0DiILpHEe6R8P0LTmbuZQ" name="subscribe"/>
+    <events xmi:id="_vPIUkLpHEe6R8P0LTmbuZQ" name="unsubscribe"/>
+    <events xmi:id="_wm9qMLpHEe6R8P0LTmbuZQ" name="uploadedVideo"/>
+    <events xmi:id="_w-TMILpHEe6R8P0LTmbuZQ" name="watchVideo"/>
+    <domains xmi:id="_rbrRELpHEe6R8P0LTmbuZQ" name="Subscriptions">
+      <fields xmi:id="_sSFUoLpHEe6R8P0LTmbuZQ"/>
+    </domains>
+    <domains xmi:id="_r6WxILpHEe6R8P0LTmbuZQ" name="Video">
+      <fields xmi:id="_sioSELpHEe6R8P0LTmbuZQ"/>
+    </domains>
+    <controllers xmi:id="_qvh8wLpHEe6R8P0LTmbuZQ" name="SubscriptionsController">
+      <fields xmi:id="_szfYkLpHEe6R8P0LTmbuZQ"/>
+    </controllers>
+    <httpResources xmi:id="_xa5okLpHEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_x-e2wLpHEe6R8P0LTmbuZQ" method="PUT"/>
+  </microservices>
+  <eventStream xmi:id="_U4k3kLpHEe6R8P0LTmbuZQ" name="Video Uploaded"/>
+  <eventStream xmi:id="_VVL7ELpHEe6R8P0LTmbuZQ" name="Video Liked"/>
+  <eventStream xmi:id="_VpVmILpHEe6R8P0LTmbuZQ" name="Video Disliked"/>
+  <eventStream xmi:id="_WAI8kLpHEe6R8P0LTmbuZQ" name="Video Viewed"/>
+  <eventStream xmi:id="_WR2XoLpHEe6R8P0LTmbuZQ" name="Subscribed"/>
+  <eventStream xmi:id="_WroJkLpHEe6R8P0LTmbuZQ" name="Unsubscribed"/>
+</Social>

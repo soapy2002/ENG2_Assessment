@@ -1,0 +1,54 @@
+<package uri="Y3887821" prefix="">
+  <class name="Social">
+    <val name="microservices" type="Microservice[*]"/>
+  </class>
+
+  <class name="Microservice">
+    <val name="events" type="Event[*]"/>
+    <val name="subscribesTo" type="EventStream[*]"/>
+    <val name="publishesTo" type="EventStream[*]"/>
+    <val name="httpResources" type="HTTPResource[*]"/>
+    <attr name="name" type="String"/>
+  </class>
+
+  <class name="Event">
+    <val name="fields" type="EventField[*]"/>
+    <attr name="name" type="String"/>
+  </class>
+
+  <class name="EventField">
+    <attr name="name" type="String"/>
+    <attr name="type" type="String"/>
+  </class>
+
+  <class name="EventStream">
+    <attr name="name" type="String"/>
+    <val name="type" type="Event"/>
+  </class>
+
+  <class name="HTTPResource">
+    <val name="request" type="Request[*]"/>
+    <val name="response" type="Response[*]"/>
+    <attr name="method" type="HTTPMethod"/>
+    <attr name="endpoint" type="String"/>
+  </class>
+
+  <enum name="HTTPMethod">
+    <literal name="GET"/>
+    <literal name="POST"/>
+    <literal name="PUT"/>
+    <literal name="DELETE"/>
+  </enum>
+
+  <class name="Request">
+    <attr name="name" type="String"/>
+    <attr name="type" type="String"/>
+    <attr name="description" type="String"/>
+  </class>
+
+  <class name="Response">
+    <attr name="name" type="String"/>
+    <attr name="type" type="String"/>
+    <attr name="description" type="String"/>
+  </class>
+</package>

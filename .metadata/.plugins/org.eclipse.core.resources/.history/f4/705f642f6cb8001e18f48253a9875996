@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Social xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Y3887821" xmi:id="_NPqywLhVEe6R8P0LTmbuZQ">
+  <microservices xmi:id="_OdpBwLhVEe6R8P0LTmbuZQ">
+    <events xmi:id="_SC0_wLhVEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_SXMtQLhVEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_Sq4eQLhVEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_TN0zQLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_TiusQLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_T9DQwLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_US3vwLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_Uo_wwLhVEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_O2N50LhVEe6R8P0LTmbuZQ">
+    <httpResources xmi:id="_WMfj0LhVEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <microservices xmi:id="_PLQ8wLhVEe6R8P0LTmbuZQ">
+    <events xmi:id="_WpPxQLhVEe6R8P0LTmbuZQ"/>
+    <events xmi:id="_W63swLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_XQ61QLhVEe6R8P0LTmbuZQ"/>
+    <httpResources xmi:id="_XseI0LhVEe6R8P0LTmbuZQ"/>
+  </microservices>
+  <eventStream xmi:id="_PebJULhVEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_Pzjr0LhVEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_QGyJ0LhVEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_QX3SwLhVEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_QsiiQLhVEe6R8P0LTmbuZQ"/>
+  <eventStream xmi:id="_RUWwMLhVEe6R8P0LTmbuZQ"/>
+</Social>

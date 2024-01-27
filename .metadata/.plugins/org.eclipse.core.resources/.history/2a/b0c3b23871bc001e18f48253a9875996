@@ -1,0 +1,9 @@
+package [%=m.name.toLowerCase()%];
+
+[%for (domains in Domain.all){%]
+
+class [%=domains.name%][%}%] {
+	[%for (fields in Fields.all){%]
+	private [%=fields.type%] [%=fields.name%]
+	[%}%]
+}

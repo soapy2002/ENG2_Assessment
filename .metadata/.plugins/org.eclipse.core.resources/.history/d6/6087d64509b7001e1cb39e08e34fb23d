@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" name="Y3887821" version="12.0.0.2017041100">
+  <ownedViewpoints name="SocialMediaViewpoint" label="SocialMediaViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" domainClass="Y3887821::Social" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="MicroserviceNode" label="MicroserviceNode" semanticCandidatesExpression="feature:microservices" domainClass="Y3887821::Microservice"/>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="Y3887821.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

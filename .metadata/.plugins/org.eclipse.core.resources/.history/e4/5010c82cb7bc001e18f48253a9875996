@@ -1,0 +1,15 @@
+rule Domain2Java transform d : Domain {
+	template: "Domain2Java.egl"
+	
+	parameters : Map{"m" = d.eContainer()}
+	
+	target: "/Domains" + d.name.ftuc() + ".java"
+}
+
+rule Controller2Java transform c : Controller {
+	template: "Controller2Java.egl"
+	
+	parameters : Map{"m" = c.eContainer()}
+	
+	target: "/Controllers" + c.name.ftuc() + ".java"
+}

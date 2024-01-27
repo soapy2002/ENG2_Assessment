@@ -1,0 +1,7 @@
+
+[%for (microservices in Microservice.all){%]
+[%for (controllers in Controller.all){%]
+
+public class [%=microservices.controllers.name%][%}%][%}%] {
+
+}
