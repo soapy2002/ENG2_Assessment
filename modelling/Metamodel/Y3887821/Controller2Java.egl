@@ -1,0 +1,6 @@
+
+[%for (controllers in Controller.all){%]
+
+public class [%=controllers.name%][%}%] {
+
+}

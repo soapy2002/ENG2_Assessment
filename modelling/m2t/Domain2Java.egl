@@ -1,0 +1,8 @@
+
+[%for (domains in Domain){%]
+
+class [%=domains.name%][%}%] {
+	[%for (fields in Fields.all){%]
+	private [%=fields.type%] [%=fields.name%]
+	[%}%]
+}

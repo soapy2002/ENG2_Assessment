@@ -1,0 +1,32 @@
+@namespace(uri="Y3887821", prefix="Y3887821")
+
+context Social {
+    constraint AtLeastOneService{
+        check: self.microservices.size() > 0
+        message: "needs to have at least one microservice"
+    }
+}
+
+context Microservice {
+	constraint OneCharacter {
+		check: self.name.length() > 1
+		message: "Microservice names must be at least character long"
+	}
+	
+	constraint HasHTTPResource{
+        check: self.httpResources.collect(e|e.method = "GET" and e.request.body.size() = 0).size() > 0
+        message: "microservice needs a HTTP Resource"    
+    }
+}
+
+context EventStream {
+    constraint HasAConsumer {
+        check: self.subscribesto.size() > 0
+        message: "event stream needs at least one consumer"
+    }
+    
+    constraint HasAProducer {
+        check: self.publishesto.size() > 0
+        message: "event stream needs at least one producer"
+    }
+}
