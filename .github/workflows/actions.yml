@@ -20,9 +20,4 @@ jobs:
       - run: gradle init
       - run: ./Microservices/video-microservice/gradlew init
       - run: ./Microservices/video-microservice/gradlew dockerbuild
-       name: Cache Gradle packages
-        uses: actions/cache@v3
-          with:
-            path: |
-              ~/.gradle/caches
-              ~/.gradle/wrapper
+      
