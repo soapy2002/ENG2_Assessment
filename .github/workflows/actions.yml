@@ -18,4 +18,11 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: docker --version
       - run: gradle init
-      - run: ./Microservices/video-microservice/gradlew tasks --all
+      - run: ./Microservices/video-microservice/gradlew init
+      - run: ./Microservices/video-microservice/gradlew dockerbuild
+       name: Cache Gradle packages
+        uses: actions/cache@v3
+          with:
+            path: |
+              ~/.gradle/caches
+              ~/.gradle/wrapper
