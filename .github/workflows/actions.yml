@@ -23,9 +23,12 @@ jobs:
     - name: build images if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
-        ./Microservices/video-microservice/gradlew dockerBuild
-        ./Microservices/trending-hashtags-microservice/gradlew dockerBuild
-        ./Microservices/subscription-microservice/gradlew dockerBuild
+        cd ./Microservices/video-microservice
+        ./gradlew dockerBuild
+        cd ../trending-hashtags-microservice
+        ./gradlew dockerBuild
+        cd ../subscription-microservice
+        ./gradlew dockerBuild
 
     - name: Save images to cache
       id: cache-images-save
