@@ -1,0 +1,37 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key: ${{ runner.os }}-images
+
+    - name: checkout if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/checkout@v3
+
+    - name: build images if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      run: | 
+        ./Microservices/video-microservice/gradlew dockerBuild
+        ./Microservices/trending-hashtags-microservice/gradlew dockerBuild
+        ./Microservices/subscription-microservice/gradlew dockerBuild
+
+    - name: Save images to cache
+      id: cache-images-save
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: |
+          ./
+        key: ${{ steps.cache-images.outputs.cache-primary-key }}
