@@ -30,7 +30,7 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: |
-          ${GITHUB_WORKSPACE}/Microservices/video-microservice
+          ./
         key: ${{ steps.cache-images.outputs.cache-primary-key }}
 
   THM_Build:
@@ -60,7 +60,7 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: |
-          ${GITHUB_WORKSPACE}/Microservices/trending-hashtags-microservice
+          ./
 
         key: ${{ steps.cache-images.outputs.cache-primary-key }}
 
@@ -91,6 +91,6 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: |
-          ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
+          ./
 
         key: ${{ steps.cache-images.outputs.cache-primary-key }}
