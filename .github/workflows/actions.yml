@@ -12,7 +12,7 @@ jobs:
       with:
         path: |
           ./Microservices/video-microservice
-        key: ${{ runner.os }}-images
+        key: ${{ runner.os }}-image1
 
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
@@ -42,7 +42,7 @@ jobs:
       with:
         path: |
           ./Microservices/trending-hashtags-microservice
-        key: ${{ runner.os }}-images
+        key: ${{ runner.os }}-image2
 
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
@@ -73,7 +73,7 @@ jobs:
       with:
         path: |
           ./Microservices/subscription-microservice
-        key: ${{ runner.os }}-images
+        key: ${{ runner.os }}-image3
 
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
