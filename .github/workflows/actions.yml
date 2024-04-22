@@ -3,17 +3,15 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
 jobs:
-  build:
+  VM_Build:
     runs-on: ubuntu-latest
-
     steps:
-
     - name: Restore cached images
       id: cache-images
       uses: actions/cache/restore@v4
       with:
         path: |
-          ./
+          ./Microservices/video-microservice
         key: ${{ runner.os }}-images
 
     - name: checkout if no cache
@@ -23,19 +21,7 @@ jobs:
     - name: build VM if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
-        cd ./Microservices/video-microservice
-        ./gradlew dockerBuild
-
-    - name: build THM if no cache
-      if: steps.cache-images.outputs.cache-hit != 'true'
-      run: | 
-        cd ../trending-hashtags-microservice
-        ./gradlew dockerBuild
-
-    - name: build SM if no cache
-      if: steps.cache-images.outputs.cache-hit != 'true'
-      run: | 
-        cd ../subscription-microservice
+        cd ${GITHUB_WORKSPACE}/Microservices/video-microservice
         ./gradlew dockerBuild
 
     - name: Save images to cache
@@ -45,7 +31,66 @@ jobs:
       with:
         path: |
           ${GITHUB_WORKSPACE}/Microservices/video-microservice
+        key: ${{ steps.cache-images.outputs.cache-primary-key }}
+
+  THM_Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./Microservices/trending-hashtags-microservice
+        key: ${{ runner.os }}-images
+
+    - name: checkout if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/checkout@v3
+
+    - name: build THM if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      run: | 
+        cd ${GITHUB_WORKSPACE}/Microservices/trending-hashtags-microservice
+        ./gradlew dockerBuild
+
+    - name: Save images to cache
+      id: cache-images-save
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: |
           ${GITHUB_WORKSPACE}/Microservices/trending-hashtags-microservice
+
+        key: ${{ steps.cache-images.outputs.cache-primary-key }}
+
+  SM_Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./Microservices/subscription-microservice
+        key: ${{ runner.os }}-images
+
+    - name: checkout if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/checkout@v3
+
+    - name: build SM if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      run: | 
+        cd ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
+        ./gradlew dockerBuild
+
+    - name: Save images to cache
+      id: cache-images-save
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v4
+      with:
+        path: |
           ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
 
         key: ${{ steps.cache-images.outputs.cache-primary-key }}
