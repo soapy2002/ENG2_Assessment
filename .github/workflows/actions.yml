@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: ["image1", "image2", "image3"]
 
     steps:
 
@@ -20,14 +23,22 @@ jobs:
       if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
 
-    - name: build images if no cache
+    - name: build VM if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
         cd ./Microservices/video-microservice
         ./gradlew dockerBuild
-        cd ../trending-hashtags-microservice
+
+    - name: build THM if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      run: | 
+         cd ../trending-hashtags-microservice
         ./gradlew dockerBuild
-        cd ../subscription-microservice
+
+    - name: build SM if no cache
+      if: steps.cache-images.outputs.cache-hit != 'true'
+      run: | 
+         cd ../subscription-microservice
         ./gradlew dockerBuild
 
     - name: Save images to cache
@@ -36,5 +47,8 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: |
-          ./
+          ${GITHUB_WORKSPACE}/Microservices/video-microservice
+          ${GITHUB_WORKSPACE}/Microservices/trending-hashtags-microservice
+          ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
+
         key: ${{ steps.cache-images.outputs.cache-primary-key }}
