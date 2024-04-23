@@ -6,6 +6,14 @@ jobs:
   VM_Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image1
 
     - name: checkout if no cache
       if: ${{ runner.os }}-image1.cache-hit != 'true'
@@ -30,6 +38,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image2
+
     - name: checkout if no cache
       if: ${{ runner.os }}-image2.cache-hit != 'true'
       uses: actions/checkout@v3
@@ -53,6 +70,14 @@ jobs:
   SM_Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image3
 
     - name: checkout if no cache
       if: ${{ runner.os }}-image3.cache-hit != 'true'
