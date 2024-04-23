@@ -6,6 +6,14 @@ jobs:
   VM_Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./Microservices/video-microservice
+        key: ${{ runner.os }}-image1
+
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
@@ -23,11 +31,19 @@ jobs:
       with:
         path: |
           ./
-        key: ${{ runner.os }}-image1
+        key: ${{ steps.cache-images.outputs.cache-primary-key }}
 
   THM_Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./Microservices/trending-hashtags-microservice
+        key: ${{ runner.os }}-image2
+
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
@@ -45,11 +61,20 @@ jobs:
       with:
         path: |
           ./
-        key: ${{ runner.os }}-image2
+
+        key: ${{ steps.cache-images.outputs.cache-primary-key }}
 
   SM_Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Restore cached images
+      id: cache-images
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./Microservices/subscription-microservice
+        key: ${{ runner.os }}-image3
+
     - name: checkout if no cache
       if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
@@ -83,5 +108,3 @@ jobs:
           ./Microservices/subscription-microservice
         key:   |
           ${{ runner.os }}-image1
-          ${{ runner.os }}-image2
-          ${{ runner.os }}-image3
