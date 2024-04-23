@@ -103,7 +103,7 @@ jobs:
     needs: [VM_Build, THM_Build, SM_Build]
     steps:
     - name: Restore image1
-      id: cache-images
+      id: cache-image1
       uses: actions/cache/restore@v4
       with:
         path: |
@@ -112,7 +112,7 @@ jobs:
           ${{ runner.os }}-image1
 
     - name: Restore image2
-      id: cache-images
+      id: cache-image2
       uses: actions/cache/restore@v4
       with:
         path: |
@@ -121,11 +121,10 @@ jobs:
           ${{ runner.os }}-image2
 
     - name: Restore image3
-      id: cache-images
+      id: cache-image3
       uses: actions/cache/restore@v4
       with:
         path: |
           ./
         key:   |
           ${{ runner.os }}-image3
-          
