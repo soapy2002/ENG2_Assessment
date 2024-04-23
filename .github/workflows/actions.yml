@@ -16,18 +16,18 @@ jobs:
           ${{ runner.os }}-image1
 
     - name: checkout if no cache
-      if: ${{ runner.os }}-image1.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
 
     - name: build VM if no cache
-      if: ${{ runner.os }}-image1.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
         cd ${GITHUB_WORKSPACE}/Microservices/video-microservice
         ./gradlew dockerBuild
 
     - name: Save images to cache
       id: cache-images-save
-      if: ${{ runner.os }}-image1.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/cache/save@v4
       with:
         path: |
@@ -48,18 +48,18 @@ jobs:
           ${{ runner.os }}-image2
 
     - name: checkout if no cache
-      if: ${{ runner.os }}-image2.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
 
     - name: build THM if no cache
-      if: ${{ runner.os }}-image2.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
         cd ${GITHUB_WORKSPACE}/Microservices/trending-hashtags-microservice
         ./gradlew dockerBuild
 
     - name: Save images to cache
       id: cache-images-save
-      if: ${{ runner.os }}-image2.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/cache/save@v4
       with:
         path: |
@@ -80,18 +80,18 @@ jobs:
           ${{ runner.os }}-image3
 
     - name: checkout if no cache
-      if: ${{ runner.os }}-image3.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/checkout@v3
 
     - name: build SM if no cache
-      if: ${{ runner.os }}-image3.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       run: | 
         cd ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
         ./gradlew dockerBuild
 
     - name: Save images to cache
       id: cache-images-save
-      if: ${{ runner.os }}-image3.cache-hit != 'true'
+      if: steps.cache-images.outputs.cache-hit != 'true'
       uses: actions/cache/save@v4
       with:
         path: |
@@ -131,6 +131,7 @@ jobs:
 
     - name: docker compose
       run: |
+        ls
         docker compose up kafka-0 kafka-1 kafka-2
         docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-uploaded --replication-factor 3 --partitions 6
         docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-liked --replication-factor 3 --partitions 6
