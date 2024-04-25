@@ -134,4 +134,9 @@ jobs:
         ls
         cd ${GITHUB_WORKSPACE}/Microservices/video-microservice
         docker compose up -d
+        cd ../trending-hashtags-microservice
+        docker compose up -d
+        cd ../subscription-microservice
+        docker compose up -d
+
        
