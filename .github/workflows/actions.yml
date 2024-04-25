@@ -133,7 +133,7 @@ jobs:
       run: |
         ls
         cd ${GITHUB_WORKSPACE}/Microservices
-        docker compose up kafka-0 kafka-1 kafka-2
+        docker compose up kafka-0 kafka-1 kafka-2 -d
         docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-uploaded --replication-factor 3 --partitions 6
         docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-liked --replication-factor 3 --partitions 6
         docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-disliked --replication-factor 3 --partitions 6
