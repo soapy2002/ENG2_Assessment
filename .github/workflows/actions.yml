@@ -132,6 +132,6 @@ jobs:
     - name: docker compose
       run: |
         ls
-        cd ${GITHUB_WORKSPACE}/Microservices/video-microservice/build/libs
-        ls
-      
+        cd ${GITHUB_WORKSPACE}/Microservices/video-microservice
+        docker compose up -d
+       
