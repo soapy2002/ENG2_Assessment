@@ -1,6 +1,9 @@
-jpa:
-  default:
-    properties:
-      hibernate:
-        hbm2ddl:
-          auto: create-drop
+kafka:
+    default:
+        embedded:
+            enabled: true
+    streams:
+        default:
+            start-kafka-streams: false
+trendingHashtags:
+    url: /trendingHashtags

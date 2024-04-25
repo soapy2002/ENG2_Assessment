@@ -152,5 +152,10 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/Microservices/video-microservice
         ./gradlew test
+        cd ../trending-hashtags-microservice
+        ./gradlew test
+        cd ../subscription-microservice
+        ./gradlew test
+
 
        
