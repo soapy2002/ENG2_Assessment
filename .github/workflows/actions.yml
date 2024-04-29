@@ -265,5 +265,60 @@ jobs:
         cd ${GITHUB_WORKSPACE}/Microservices/subscription-microservice
         ./gradlew test
 
+  Test_Script:
+    runs-on: ubuntu-latest
+    needs: [VM_Build, THM_Build, SM_Build]
+    steps:
+    - name: Restore image1
+      id: cache-image1
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image1
+      
+    - name: Restore image2
+      id: cache-image2
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image2
+      
+    - name: Restore image3
+      id: cache-image3
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./
+        key:   |
+          ${{ runner.os }}-image3
+          
+    - name: docker compose
+      run: |
+        ls
+        cd ${GITHUB_WORKSPACE}/Microservices
+        docker compose up kafka-0 kafka-1 kafka-2 -d
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-uploaded --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-liked --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-disliked --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic video-watched --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic trending-by-hour --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic subscribe --replication-factor 3 --partitions 6
+        docker compose -f compose-prod.yml exec -e JMX_PORT= kafka-0 kafka-topics.sh --bootstrap-server kafka-0:9092 --create --topic unsubscribe --replication-factor 3 --partitions 6
+        cd ./video-microservice
+        docker compose up -d
+        cd ../trending-hashtags-microservice
+        docker compose up -d
+        cd ../subscription-microservice
+        docker compose up -d
+          
+    - name: test
+      run: |
+        cd ${GITHUB_WORKSPACE}/Microservices
+        ./test.py
+
 
        
