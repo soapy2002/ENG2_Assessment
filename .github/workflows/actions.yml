@@ -317,7 +317,8 @@ jobs:
           
     - name: test
       run: |
-        python ${GITHUB_WORKSPACE}/Microservices/test.py
+        cd ${GITHUB_WORKSPACE}/Microservices
+        python /test.py
 
 
        
