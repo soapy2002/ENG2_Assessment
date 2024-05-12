@@ -319,7 +319,7 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/Microservices
         ls
-        python ./test.py
+        python ./runTests.py
 
 
        
