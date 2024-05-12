@@ -1,14 +1,17 @@
 import threading
 import subprocess
+import time
 import os
 
 def run_script1():
     subprocess.run("video-microservice/gradlew -p video-microservice test", shell=True, check=True)
 
 def run_script2():
+    time.sleep(90)
     subprocess.run("trending-hashtags-microservice/gradlew -p trending-hashtags-microservice test", shell=True, check=True)
 
 def run_script3():
+    time.sleep(90)
     subprocess.run("subscription-microservice/gradlew -p subscription-microservice test", shell=True, check=True)
 
 if __name__ == "__main__":
