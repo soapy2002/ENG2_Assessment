@@ -3,19 +3,14 @@ import subprocess
 import time
 import os
 
-event = threading.Event()
-
 def run_script1():
     subprocess.run("video-microservice/gradlew -p video-microservice test", shell=True, check=True)
-    event.set()
 
 def run_script2():
     subprocess.run("trending-hashtags-microservice/gradlew -p trending-hashtags-microservice test", shell=True, check=True)
-    event.wait()
 
 def run_script3():
     subprocess.run("subscription-microservice/gradlew -p subscription-microservice test", shell=True, check=True)
-    event.wait()
 
 if __name__ == "__main__":
     test1_thread = threading.Thread(target=run_script1)
